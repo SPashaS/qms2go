@@ -1,0 +1,41 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.btn {
+	font-family: $fontFamily;
+	color: var(--light-color-text);
+	padding: 25px 40px;
+
+	font-size: 2.1185rem;
+	font-weight: 700;
+	line-height: 2; /* 42.369px */
+	text-transform: uppercase;
+
+	background-color: var(--accent-color);
+
+	transition: all 0.3s ease 0s;
+	display: flex;
+	justify-content: center;
+
+
+	//ios
+	// border-radius: 17px;
+	// -webkit-appearance: none;
+  // -webkit-border-radius: 17px;
+
+	// @media (min-width:$tablet){
+	// 	border-radius: 31.5px;
+	// 	-webkit-appearance: none;
+	// 	-webkit-border-radius: 31.5px;
+	// }
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.6);
+		}
+	}
+	&:active {
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+
+}

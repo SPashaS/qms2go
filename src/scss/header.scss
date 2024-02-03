@@ -1,0 +1,245 @@
+
+//====================================================================================================
+.header {
+  padding-top: 20px;
+
+  // .header__container
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media (min-width:$tablet){
+      gap: 50px; 
+    }
+    
+    @media (min-width:$pcBig){
+      gap: 100px;
+    }
+  }
+
+  // .header__logo
+  &__logo {
+    @media (min-width:$pcBig){
+      padding-top: 15px;
+    }
+  }
+
+  // .header__menu
+  &__menu {}
+
+}
+
+.logo {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+
+  @media (min-width:$mobile){
+    gap: 21px;
+  }
+  // .logo__img
+  &__img {
+    width: 72px;
+    aspect-ratio: 16 / 27;
+
+    @media (min-width:$pcBig){
+        width: 95px;
+    }
+  }
+
+  // .logo__text
+  &__text {
+    max-width: 153px;
+    color: #000000;
+    line-height: 1;
+    font-size: 1.6rem;
+
+    @media (min-width:$pcBig){
+      font-size: 2.1rem;
+    }
+  }
+}
+
+.menu {
+
+  @media (min-width:$tablet){
+    flex: 1 1 100%;
+  }
+
+  // .menu__icon
+
+  &__icon {}
+
+  // .menu__body
+  &__body {
+    @media (max-width:$tablet){
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 250px;
+      padding: 50px 20px 20px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+
+      .menu-open & {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: visible;
+        background-color: var(--accent-color);
+        color: var(--light-color-text);
+      }
+    }
+  }
+
+  // .menu__list
+
+  &__list {
+    @media (min-width:$tablet){
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      column-gap: 60px;
+      row-gap: 20px;
+    }
+
+    @media (min-width:$pcBig){
+      column-gap: 85px;
+    }
+  }
+
+  // .menu__item
+
+  &__item {
+    @media (max-width:$tablet){
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  // .menu__link
+  &__link {
+    color: var(--accent-color);
+    font-weight: 700;
+    line-height: 2;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+
+    font-size: 1.4rem;
+
+
+    @media (max-width:$tablet){
+      color: var(--light-color-text);
+    }
+
+    @media (min-width:$pcBig){
+      font-size: 1.8rem;
+    }
+
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--main-color-text);
+      }
+    }
+    &:active {
+      color: var(--main-color-text);
+    }
+  }
+}
+
+
+//====================================================================================================
+//Burger
+.burger  {
+	display: none;
+
+	@media (max-width: $tablet) {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    padding: 20px 10px;
+    cursor: pointer;
+    z-index: 35;
+
+		&__lines {
+			display: block;
+			width: 40px;
+			height: 100%;
+			position: relative;
+
+      &::before,
+			&::after {
+				content: "";
+      }
+
+			&::before,
+			&::after,
+      & span {
+				transition: all 0.3s ease 0s;
+				left: 0px;
+				right: 0px;
+				position: absolute;
+				height: 2px;
+				background-color: var(--accent-color);
+			}
+
+			&::before {
+				top: 0px;
+			}
+
+			&::after {
+				bottom: 0px;
+			}
+
+      span {
+        top: calc(50% - 1px);
+      }
+
+			.menu-open & {
+        &::before,
+        &::after,
+        & span {
+          background-color: var(--color-light);
+        }
+				&::before {
+					transform: rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+				&::after {
+					transform: rotate(45deg);
+					bottom: calc(50% - 1px);
+				}
+        span {
+          opacity: 0;
+        }
+			}
+		}
+	}
+}
+
+//====================================================================================================
+
+
+//====================================================================================================
+
+
+//====================================================================================================
+
+
+//====================================================================================================
+
+
+//====================================================================================================
+
+
+//====================================================================================================
+
+
+//====================================================================================================
