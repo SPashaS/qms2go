@@ -144,24 +144,24 @@ h6 {
   margin: 0 auto;
   padding: 0 15px;
 }
-@media (min-width: 767.98px) {
+@media (min-width: 1920px) {
   [class*=__container] {
-    padding: 0 15px;
+    padding-left: 17rem;
   }
 }
-@media (min-width: 991.98px) {
+@media (min-width: 1280px) and (max-width: 1920px) {
   [class*=__container] {
-    padding: 0 40px;
+    padding-left: clamp( 7rem , -13rem  +  15.625vw , 17rem );
   }
 }
-@media (min-width: 1279.98px) {
+@media (min-width: 1920px) {
   [class*=__container] {
-    padding: 0 120px;
+    padding-right: 17rem;
   }
 }
-@media (min-width: 1700px) {
+@media (min-width: 1280px) and (max-width: 1920px) {
   [class*=__container] {
-    padding: 0 170px;
+    padding-right: clamp( 7rem , -13rem  +  15.625vw , 17rem );
   }
 }
 
