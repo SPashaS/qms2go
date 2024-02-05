@@ -41,11 +41,11 @@
       }, 1e3),
         window.addEventListener("scroll", (e) => {
           let i = window.pageYOffset + r;
-          i < s
-            ? ((t.style.position = "fixed"), (t.style.top = "65px"))
-            : i > s &&
+          i < s - 70
+            ? ((t.style.position = "fixed"), (t.style.top = "70px"))
+            : i > s - 70 &&
               ((t.style.position = "absolute"),
-              (t.style.top = s - r + 20 + "px"));
+              (t.style.top = s - r - 20 + "px"));
           let o =
               (window.pageYOffset + document.documentElement.clientHeight) /
               300,
